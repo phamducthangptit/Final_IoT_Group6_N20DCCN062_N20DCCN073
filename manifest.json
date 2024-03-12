@@ -1,0 +1,21 @@
+{
+    "name": "URL Detection",
+    "version": "1.0",
+    "description": "Tiện ích phát hiện URL độc hại",
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab",
+        "webNavigation"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
+
